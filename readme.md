@@ -6,17 +6,21 @@ This requires python and docker. If they are not already installed then they sho
 
 <details><summary>brew</summary>
 <p>
+
     ```sh
     brew install docker --cask
     ```
+
 </p>
 </details>
 
 <details><summary>winget</summary>
 <p>
+
     ```pwsh
     winget install Docker.DockerDesktop
     ```
+    
 </p>
 </details>
 
@@ -32,10 +36,14 @@ This HTTP server can be used to view the data from the client. Another machine o
 ## Usage
 Move `sensor.py` and `requirements.txt` to the client machine, install the only requirement (prometheus client) and begin the service by simply running `sensor.py`. The client should be exposing viewable data from prometheus at localhost:8000.
 
-Your router will have configured a local IP address for the client, place that IP address in the spot `prometheus.yml` file where it says `host.docker.internal`. This tells the prometheus server where it should be scraping data from.
+Your router will have configured a local IP address for the client. On another machine, running docker desktop, place that IP address in `prometheus.yml` file in place of where it says `host.docker.internal`. This tells the prometheus server where it should be scraping data from.
 
-On another machine, running docker desktop, run the following command in this project's directory.
+Next, run the following command in this project's directory.
 ```sh
 docker build -t prom_server .
 ```
-This will create an image for the prometheus server with the 
+This will create an image for the prometheus server with the cofinguration set correctly.
+
+From the Docker Desktop Images tab run the prom_server image, with the port 9090 set, to create a container.
+
+This container should be running and actively scraping data, view it at localhost:9090.65=-5========                
