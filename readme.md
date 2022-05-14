@@ -6,21 +6,13 @@ This requires python and docker. If they are not already installed then they sho
 
 <details><summary>brew</summary>
 <p>
-
-    ```sh
     brew install docker --cask
-    ```
-
 </p>
 </details>
 
 <details><summary>winget</summary>
 <p>
-
-    ```pwsh
-    winget install Docker.DockerDesktop
-    ```
-    
+    winget install Docker.DockerDesktop    
 </p>
 </details>
 
@@ -46,4 +38,4 @@ This will create an image for the prometheus server with the cofinguration set c
 
 From the Docker Desktop Images tab run the prom_server image, with the port 9090 set, to create a container.
 
-This container should be running and actively scraping data, view it at localhost:9090.65=-5========                
+This container should be running and actively scraping data, view it at localhost:9090.
