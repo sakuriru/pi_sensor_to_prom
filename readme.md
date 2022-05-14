@@ -4,17 +4,14 @@ This project contains an example of how to configure and expose sensors to a Pro
 ## Installation
 This requires python and docker. If they are not already installed then they should be. I recommend installing <a href="https://docs.docker.com/desktop/">Docker Desktop</a> for your platform to more easily manage images. It can also be installed using brew or winget.
 
-<details><summary>brew</summary>
-<p>
-    brew install docker --cask
-</p>
-</details>
 
-<details><summary>winget</summary>
-<p>
-    winget install Docker.DockerDesktop    
-</p>
-</details>
+```sh
+brew install docker --cask
+```
+
+```pwsh
+winget install Docker.DockerDesktop
+```
 
 Using docker, it is not required to install prometheus, since its reference will be pulled automatically from the Dockerfile.
 
